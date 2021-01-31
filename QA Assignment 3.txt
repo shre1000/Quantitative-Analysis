@@ -1,0 +1,81 @@
+% Part 1
+
+A = [1,2; -2,0];
+B = [-3,2; -2,-4];
+
+disp('A =');
+disp(A);
+
+disp('B =');
+disp(B);
+
+AB = A*B;
+disp('AB =');
+disp(AB);
+
+BA = B*A;
+disp('BA =');
+disp(BA);
+
+disp('Two matrices A and B are commutative.');
+
+invA_invB = inv(A)* inv(B);
+invAB = inv(AB);
+
+disp('multiplication of A inverse and B inverse =');
+disp(invA_invB);
+disp('which is equal to AB inverse');
+disp(invAB);
+
+C = [2,1,0; 3,4,0; 0, 0, 2];
+D = [1,-1,3; 7,1,2; 5,0,1];
+
+CD = C*D;
+det_CD = det(CD);
+disp('|CD| =');
+disp(det_CD);
+
+det_C = det(C);
+det_D = det(D);
+det_C_ded_D = det_C * det_D;
+disp('|C| * |D| =');
+disp(det_C_ded_D);
+
+disp('|C| + |D| =');
+disp(det_C + det_D);
+
+CD_sum = C+D;
+det_CD_sum = det(CD_sum);
+disp('|C+D| =');
+disp(det_CD_sum);
+
+transCD = transpose(C*D);
+disp('transpose of CD =');
+disp(transCD);
+
+trans_product = transpose(D)*transpose(C);
+disp('transpose of D * transpose of C =');
+disp(trans_product);
+
+trans_inv = transpose(inv(C));
+inv_transn= inv(transpose(C));
+
+disp('transpose of c inv =');
+disp(trans_inv);
+disp('inv of C transpose =');
+disp(inv_transn);
+
+% Part 2
+
+Ainv_A = inv(A)*A;
+disp(Ainv_A);
+A_invA = A * inv(A);
+disp(A_invA);
+
+Ainv_B = inv(A) * B;
+disp(Ainv_B);
+B_invA = B * inv(A);
+disp(B_invA);
+
+
+
